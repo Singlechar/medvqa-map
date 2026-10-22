@@ -1,0 +1,1953 @@
+{
+  "version": 1,
+  "updated_at": "2026-10-21",
+  "matrix_overrides": {},
+  "papers": [
+    {
+      "id": "P001",
+      "title": "Medical visual question answering: A survey",
+      "title_zh": "医学视觉问答：综述",
+      "authors": "Lin",
+      "first_author": "Lin",
+      "year": 2023,
+      "venue": "Artificial Intelligence in Medicine",
+      "type": "综述",
+      "tier": "T1",
+      "rc": [
+        "RC1",
+        "RC2",
+        "RC3"
+      ],
+      "caps": [
+        "数据集"
+      ],
+      "depth": "精读",
+      "status": "已读",
+      "score": 5,
+      "one_liner": "MedVQA 数据、模型与临床挑战全景。",
+      "borrowable": "四组件框架与数据集分层。",
+      "gap": "未形成可答性、澄清、证据更新闭环。",
+      "keywords": [
+        "medical VQA",
+        "datasets",
+        "interpretability"
+      ],
+      "links": {
+        "doi": "10.1016/j.artmed.2023.102611",
+        "arxiv": "",
+        "url": "https://doi.org/10.1016/j.artmed.2023.102611"
+      },
+      "pdf": "../02_参考文献/综述A_MedVQA.pdf",
+      "note": "综述A",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P002",
+      "title": "Task-specific models vs. large vision-language models in medical visual question answering: A survey",
+      "title_zh": "任务专用模型与大型视觉语言模型在医学视觉问答中的比较：综述",
+      "authors": "Xu",
+      "first_author": "Xu",
+      "year": 2026,
+      "venue": "Expert Systems With Applications",
+      "type": "综述",
+      "tier": "T1",
+      "rc": [
+        "RC1",
+        "RC2"
+      ],
+      "caps": [
+        "幻觉"
+      ],
+      "depth": "精读",
+      "status": "已读",
+      "score": 5,
+      "one_liner": "比较 TSM 与 VLM 的性能、资源和可靠性。",
+      "borrowable": "混合架构与动态模型路由。",
+      "gap": "未把路由触发条件落实为风险/证据决策。",
+      "keywords": [
+        "TSM",
+        "VLM",
+        "hallucination",
+        "deployment"
+      ],
+      "links": {
+        "doi": "10.1016/j.eswa.2026.132008",
+        "arxiv": "",
+        "url": "https://doi.org/10.1016/j.eswa.2026.132008"
+      },
+      "pdf": "../02_参考文献/综述B_MedVQA2026.pdf",
+      "note": "综述B",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P003",
+      "title": "Uncertainty-Aware Decision Making in Multimodal Large Language Models",
+      "title_zh": "多模态大语言模型中的不确定性感知决策",
+      "authors": "Boudiaf",
+      "first_author": "Boudiaf",
+      "year": 2026,
+      "venue": "arXiv",
+      "type": "综述",
+      "tier": "T1",
+      "rc": [
+        "RC1",
+        "RC2",
+        "RC3"
+      ],
+      "caps": [
+        "拒答",
+        "多轮追问",
+        "校准"
+      ],
+      "depth": "精读",
+      "status": "已读",
+      "score": 5,
+      "one_liner": "以来源—信号—校准—行动组织多模态不确定性。",
+      "borrowable": "动作配对校准、风险覆盖率、保形控制。",
+      "gap": "未给出医学证据缺口归因和多轮状态实现。",
+      "keywords": [
+        "uncertainty",
+        "calibration",
+        "abstention",
+        "clarification"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2608.17084",
+        "url": "https://arxiv.org/abs/2608.17084"
+      },
+      "pdf": "../02_参考文献/综述C_不确定性感知决策.pdf",
+      "note": "综述C",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P004",
+      "title": "MediQ: Question-Asking LLMs and a Benchmark for Reliable Interactive Clinical Reasoning",
+      "title_zh": "MediQ：会提问的大语言模型与可靠交互式临床推理基准",
+      "authors": "Li",
+      "first_author": "Li",
+      "year": 2024,
+      "venue": "NeurIPS",
+      "type": "方法",
+      "tier": "T1",
+      "rc": [
+        "RC1",
+        "RC2",
+        "RC3"
+      ],
+      "caps": [
+        "拒答",
+        "多轮追问",
+        "基准"
+      ],
+      "depth": "精读",
+      "status": "已读",
+      "score": 5,
+      "one_liner": "交互式医学问答中的拒答、提问和病人反馈闭环。",
+      "borrowable": "轨迹日志与多轮交互协议。",
+      "gap": "置信度未校准、提问不归因、反馈更新弱。",
+      "keywords": [
+        "interactive medical QA",
+        "abstention",
+        "dialogue"
+      ],
+      "links": {
+        "doi": "10.52202/079017-0908",
+        "arxiv": "",
+        "url": "https://doi.org/10.52202/079017-0908"
+      },
+      "pdf": "../02_参考文献/MediQ.pdf",
+      "note": "项目复现对象；元数据据本地 PDF 与 Crossref 核实（NeurIPS 2024，arXiv 2406.00922）",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P005",
+      "title": "A dataset of clinically generated visual questions and answers about radiology images",
+      "title_zh": "放射影像临床视觉问答数据集",
+      "authors": "Lau",
+      "first_author": "Lau",
+      "year": 2018,
+      "venue": "Scientific Data",
+      "type": "数据集",
+      "tier": "T1",
+      "rc": [
+        "RC2"
+      ],
+      "caps": [
+        "数据集"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 4,
+      "one_liner": "VQA-RAD 提供临床生成的放射图像问答。",
+      "borrowable": "自然问题类别与开放/封闭答案设计。",
+      "gap": "规模小，未提供交互式缺证据标签。",
+      "keywords": [
+        "VQA-RAD",
+        "radiology",
+        "clinical questions"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "",
+        "url": "https://doi.org/10.1038/sdata.2018.251"
+      },
+      "pdf": "",
+      "note": "基础数据集",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P006",
+      "title": "SLAKE: A semantically-labeled knowledge-enhanced dataset for medical visual question answering",
+      "title_zh": "SLAKE：面向医学视觉问答的语义标注知识增强数据集",
+      "authors": "Liu",
+      "first_author": "Liu",
+      "year": 2021,
+      "venue": "ISBI",
+      "type": "数据集",
+      "tier": "T1",
+      "rc": [
+        "RC2",
+        "RC3"
+      ],
+      "caps": [
+        "归因",
+        "知识",
+        "数据集"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 5,
+      "one_liner": "带语义标注和医学知识图谱的 MedVQA 数据集。",
+      "borrowable": "知识图谱、分割和检测标注。",
+      "gap": "没有澄清策略和风险更新。",
+      "keywords": [
+        "SLAKE",
+        "knowledge graph",
+        "grounding"
+      ],
+      "links": {
+        "doi": "10.1109/isbi48211.2021.9434010",
+        "arxiv": "",
+        "url": "https://doi.org/10.1109/isbi48211.2021.9434010"
+      },
+      "pdf": "",
+      "note": "基础数据集；DOI 已核（ISBI 2021），arXiv 2102.09542",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P007",
+      "title": "Towards visual dialog for radiology",
+      "title_zh": "迈向放射影像的视觉对话",
+      "authors": "Kovaleva",
+      "first_author": "Kovaleva",
+      "year": 2020,
+      "venue": "BioNLP workshop",
+      "type": "数据集",
+      "tier": "T1",
+      "rc": [
+        "RC2",
+        "RC3"
+      ],
+      "caps": [
+        "多轮追问",
+        "数据集"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 5,
+      "one_liner": "RadVisDial 将放射图像与多轮对话结合。",
+      "borrowable": "上下文依赖和患者级评价。",
+      "gap": "对无法获得证据和重复提问控制不足。",
+      "keywords": [
+        "visual dialogue",
+        "RadVisDial",
+        "context"
+      ],
+      "links": {
+        "doi": "10.18653/v1/2020.bionlp-1.6",
+        "arxiv": "",
+        "url": "https://aclanthology.org/2020.bionlp-1.6/"
+      },
+      "pdf": "",
+      "note": "对话数据集；原表 url 误作 bionlp-1.7，已修正",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P008",
+      "title": "Selectively Answering Visual Questions",
+      "title_zh": "视觉问答中的选择性作答",
+      "authors": "Eisenschlos",
+      "first_author": "Eisenschlos",
+      "year": 2024,
+      "venue": "Findings of ACL",
+      "type": "方法",
+      "tier": "T1",
+      "rc": [
+        "RC1"
+      ],
+      "caps": [
+        "拒答"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 4,
+      "one_liner": "让视觉问答系统在不确定时选择回答或弃答。",
+      "borrowable": "coverage-risk 选择性回答。",
+      "gap": "未面向医学多轮澄清。",
+      "keywords": [
+        "selective prediction",
+        "VQA",
+        "abstention"
+      ],
+      "links": {
+        "doi": "10.18653/v1/2024.findings-acl.250",
+        "arxiv": "",
+        "url": "https://aclanthology.org/2024.findings-acl.250/"
+      },
+      "pdf": "",
+      "note": "RC1 对照；题名原误作 Selective answering，已修正",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P009",
+      "title": "Confidence calibration for multimodal LLMs: An empirical study through medical VQA",
+      "title_zh": "多模态大语言模型的置信度校准：基于医学视觉问答的实证研究",
+      "authors": "Du",
+      "first_author": "Du",
+      "year": 2025,
+      "venue": "MICCAI",
+      "type": "方法",
+      "tier": "T1",
+      "rc": [
+        "RC1"
+      ],
+      "caps": [
+        "校准"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 4,
+      "one_liner": "在医学 VQA 中研究多模态 LLM 置信度对齐。",
+      "borrowable": "领域校准与医学 VQA 评价。",
+      "gap": "未形成 RC1→RC2→RC3 交互闭环。",
+      "keywords": [
+        "medical VQA",
+        "confidence calibration"
+      ],
+      "links": {
+        "doi": "10.1007/978-3-032-04978-0_9",
+        "arxiv": "",
+        "url": "https://doi.org/10.1007/978-3-032-04978-0_9"
+      },
+      "pdf": "",
+      "note": "直接相关",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P010",
+      "title": "Teaching vision-language models to ask: Resolving ambiguity in visual questions",
+      "title_zh": "教会视觉语言模型提问：消解视觉问题中的歧义",
+      "authors": "Jian",
+      "first_author": "Jian",
+      "year": 2025,
+      "venue": "ACL",
+      "type": "方法",
+      "tier": "T1",
+      "rc": [
+        "RC2"
+      ],
+      "caps": [
+        "多轮追问"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 4,
+      "one_liner": "训练视觉语言模型主动处理视觉问题歧义。",
+      "borrowable": "澄清问题生成思路。",
+      "gap": "非医学证据缺失，未含风险稳定更新。",
+      "keywords": [
+        "clarifying question generation",
+        "ambiguity"
+      ],
+      "links": {
+        "doi": "10.18653/v1/2025.acl-long.182",
+        "arxiv": "",
+        "url": "https://aclanthology.org/2025.acl-long.182/"
+      },
+      "pdf": "",
+      "note": "澄清基线",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P011",
+      "title": "Know your limits: A survey of abstention in large language models",
+      "title_zh": "知所止：大语言模型弃答研究综述",
+      "authors": "Wen",
+      "first_author": "Wen",
+      "year": 2025,
+      "venue": "TACL",
+      "type": "综述",
+      "tier": "T2",
+      "rc": [
+        "RC1"
+      ],
+      "caps": [
+        "拒答"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 3,
+      "one_liner": "总结大语言模型弃答与选择性预测。",
+      "borrowable": "拒答术语、风险-覆盖评价。",
+      "gap": "主要为文本 LLM，缺少医学视觉交互。",
+      "keywords": [
+        "abstention",
+        "selective prediction"
+      ],
+      "links": {
+        "doi": "10.1162/tacl_a_00754",
+        "arxiv": "",
+        "url": "https://aclanthology.org/2025.tacl-1.26/"
+      },
+      "pdf": "",
+      "note": "方法背景",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P012",
+      "title": "Unveiling uncertainty: A deep dive into calibration and performance of MLLMs",
+      "title_zh": "揭示不确定性：多模态大语言模型校准与性能的深入考察",
+      "authors": "Chen",
+      "first_author": "Chen",
+      "year": 2025,
+      "venue": "COLING",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC1"
+      ],
+      "caps": [
+        "校准"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 3,
+      "one_liner": "分析 MLLM 校准与任务性能关系。",
+      "borrowable": "校准/性能分离。",
+      "gap": "未处理证据缺失到澄清动作。",
+      "keywords": [
+        "MLLM",
+        "calibration"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2412.14660",
+        "url": "https://aclanthology.org/2025.coling-main.208/"
+      },
+      "pdf": "",
+      "note": "方法背景；ACL Anthology 页面已核（COLING 2025）；该 DOI 在 Crossref 未解析，待确认注册号",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P013",
+      "title": "MMBoundary: Advancing MLLM knowledge boundary awareness through reasoning step confidence calibration",
+      "title_zh": "MMBoundary：以推理步置信度校准提升多模态大模型的知识边界感知",
+      "authors": "He",
+      "first_author": "He",
+      "year": 2025,
+      "venue": "ACL",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC1"
+      ],
+      "caps": [
+        "校准",
+        "知识"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 3,
+      "one_liner": "对推理步骤置信度做校准以增强知识边界意识。",
+      "borrowable": "步骤级信号。",
+      "gap": "未面向医学影像可答性。",
+      "keywords": [
+        "reasoning confidence",
+        "calibration"
+      ],
+      "links": {
+        "doi": "10.18653/v1/2025.acl-long.802",
+        "arxiv": "",
+        "url": "https://aclanthology.org/2025.acl-long.802/"
+      },
+      "pdf": "",
+      "note": "步骤校准",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P014",
+      "title": "VL-Calibration: Decoupled confidence calibration for large vision-language models reasoning",
+      "title_zh": "VL-Calibration：面向大型视觉语言模型推理的解耦式置信度校准",
+      "authors": "Xiao",
+      "first_author": "Xiao",
+      "year": 2026,
+      "venue": "ACL",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC1"
+      ],
+      "caps": [
+        "校准"
+      ],
+      "depth": "题名",
+      "status": "待读",
+      "score": 3,
+      "one_liner": "解耦视觉置信与推理置信。",
+      "borrowable": "来源感知校准。",
+      "gap": "未给出多轮医学决策策略。",
+      "keywords": [
+        "visual confidence",
+        "reasoning confidence"
+      ],
+      "links": {
+        "doi": "10.18653/v1/2026.acl-long.2074",
+        "arxiv": "",
+        "url": "https://doi.org/10.18653/v1/2026.acl-long.2074"
+      },
+      "pdf": "",
+      "note": "需复核全文；已由 arXiv 2604.09529 升级为 ACL 2026 正式版",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P015",
+      "title": "FESTA: Functionally equivalent sampling for trust assessment of multimodal LLMs",
+      "title_zh": "FESTA：面向多模态大语言模型可信评估的功能等价采样",
+      "authors": "Bhattacharya",
+      "first_author": "Bhattacharya",
+      "year": 2025,
+      "venue": "Findings of EMNLP",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC1"
+      ],
+      "caps": [
+        "拒答"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 3,
+      "one_liner": "用功能等价采样评估多模态输出不确定性。",
+      "borrowable": "采样分歧信号。",
+      "gap": "重复一致仍可能共同错误。",
+      "keywords": [
+        "sampling",
+        "semantic disagreement"
+      ],
+      "links": {
+        "doi": "10.18653/v1/2025.findings-emnlp.657",
+        "arxiv": "",
+        "url": "https://aclanthology.org/2025.findings-emnlp.657/"
+      },
+      "pdf": "",
+      "note": "黑盒信号",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P016",
+      "title": "Variational visual question answering for uncertainty-aware selective prediction",
+      "title_zh": "面向不确定性感知选择性预测的变分视觉问答",
+      "authors": "Wieczorek",
+      "first_author": "Wieczorek",
+      "year": 2026,
+      "venue": "TMLR",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC1"
+      ],
+      "caps": [
+        "拒答",
+        "校准"
+      ],
+      "depth": "题名",
+      "status": "待读",
+      "score": 3,
+      "one_liner": "用变分方法做视觉问答选择性预测。",
+      "borrowable": "不确定性与 coverage-risk。",
+      "gap": "非医疗、多轮交互未覆盖。",
+      "keywords": [
+        "selective VQA",
+        "uncertainty"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2505.09591",
+        "url": "https://openreview.net/forum?id=jtnMIbJIso"
+      },
+      "pdf": "",
+      "note": "需复核全文；TMLR 收录待核（OpenReview 反爬未能确认），arXiv 2505.09591 于 2025-05 上线",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P017",
+      "title": "Conformal prediction and MLLM aided uncertainty quantification in scene graph generation",
+      "title_zh": "共形预测与多模态大模型辅助的场景图生成不确定性量化",
+      "authors": "Nag",
+      "first_author": "Nag",
+      "year": 2025,
+      "venue": "CVPR",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC1"
+      ],
+      "caps": [
+        "校准"
+      ],
+      "depth": "题名",
+      "status": "待读",
+      "score": 3,
+      "one_liner": "将保形预测用于视觉场景图不确定性。",
+      "borrowable": "风险控制阈值。",
+      "gap": "任务不是医学 VQA。",
+      "keywords": [
+        "conformal prediction",
+        "risk control"
+      ],
+      "links": {
+        "doi": "10.1109/cvpr52734.2025.01090",
+        "arxiv": "",
+        "url": "https://doi.org/10.1109/cvpr52734.2025.01090"
+      },
+      "pdf": "",
+      "note": "方法迁移；已由 arXiv 2503.13947 升级为 CVPR 2025 正式版",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P018",
+      "title": "Conrep: Uncertainty-aware vision-language report drafting using conformal prediction",
+      "title_zh": "Conrep：基于共形预测的不确定性感知视觉语言报告撰写",
+      "authors": "Elyassirad",
+      "first_author": "Elyassirad",
+      "year": 2026,
+      "venue": "Journal of Imaging Informatics in Medicine",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC1",
+        "RC3"
+      ],
+      "caps": [
+        "校准"
+      ],
+      "depth": "题名",
+      "status": "待读",
+      "score": 4,
+      "one_liner": "用保形预测控制视觉语言报告生成风险。",
+      "borrowable": "报告级风险集合。",
+      "gap": "未处理多轮澄清。",
+      "keywords": [
+        "conformal",
+        "medical report"
+      ],
+      "links": {
+        "doi": "10.1007/s10278-026-02179-5",
+        "arxiv": "",
+        "url": "https://doi.org/10.1007/s10278-026-02179-5"
+      },
+      "pdf": "",
+      "note": "方法迁移；已由 arXiv 2602.03910 升级为期刊正式版",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P019",
+      "title": "From attribution to abstention: Training-free attention-based auditing for clinical summarization",
+      "title_zh": "从归因到弃答：面向临床摘要的免训练注意力审计",
+      "authors": "Yan",
+      "first_author": "Yan",
+      "year": 2026,
+      "venue": "arXiv",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC1",
+        "RC2"
+      ],
+      "caps": [
+        "拒答",
+        "归因"
+      ],
+      "depth": "题名",
+      "status": "待读",
+      "score": 4,
+      "one_liner": "用归因审计支持临床摘要弃答。",
+      "borrowable": "归因到拒答的无训练路径。",
+      "gap": "不是视觉问答，缺少最小澄清。",
+      "keywords": [
+        "attribution",
+        "abstention",
+        "clinical"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2601.16397",
+        "url": "https://arxiv.org/abs/2601.16397"
+      },
+      "pdf": "",
+      "note": "证据审计",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P020",
+      "title": "RadFlag: A black-box hallucination detection method for medical vision language models",
+      "title_zh": "RadFlag：面向医学视觉语言模型的黑箱幻觉检测方法",
+      "authors": "Zhang",
+      "first_author": "Zhang",
+      "year": 2025,
+      "venue": "ML4H",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC1"
+      ],
+      "caps": [
+        "幻觉"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 3,
+      "one_liner": "黑盒检测医学视觉语言模型幻觉。",
+      "borrowable": "输出级风险信号。",
+      "gap": "检测后如何澄清/更新未解决。",
+      "keywords": [
+        "hallucination",
+        "medical VLM"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "",
+        "url": "https://proceedings.mlr.press/v259/zhang25c.html"
+      },
+      "pdf": "",
+      "note": "幻觉检测；PMLR v259 页面已核，原表 ML4H 2025 年份待确认（该卷通常为 ML4H 2024 论文集）",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P021",
+      "title": "LLAVA-Med: Training a large language-and-vision assistant for biomedicine in one day",
+      "title_zh": "LLaVA-Med：一天训练出生物医学语言视觉助手",
+      "authors": "Li",
+      "first_author": "Li",
+      "year": 2023,
+      "venue": "NeurIPS",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC1",
+        "RC2"
+      ],
+      "caps": [
+        "拒答"
+      ],
+      "depth": "题名",
+      "status": "待读",
+      "score": 4,
+      "one_liner": "生物医学视觉语言助手。",
+      "borrowable": "指令微调 VLM 基线。",
+      "gap": "未提供安全闭环。",
+      "keywords": [
+        "LLaVA-Med",
+        "biomedical VLM"
+      ],
+      "links": {
+        "doi": "10.52202/075280-1240",
+        "arxiv": "",
+        "url": "https://doi.org/10.52202/075280-1240"
+      },
+      "pdf": "",
+      "note": "基线；原 url 残缺，已补 DOI（NeurIPS 36）",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P022",
+      "title": "Med-Flamingo: a multimodal medical few-shot learner",
+      "title_zh": "Med-Flamingo：多模态医学少样本学习器",
+      "authors": "Moor",
+      "first_author": "Moor",
+      "year": 2023,
+      "venue": "arXiv",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC1",
+        "RC2"
+      ],
+      "caps": [
+        "拒答"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 4,
+      "one_liner": "医疗多模态少样本学习。",
+      "borrowable": "few-shot 医疗 VLM 基线。",
+      "gap": "少样本生成可能幻觉，缺少风险策略。",
+      "keywords": [
+        "Med-Flamingo",
+        "few-shot"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "",
+        "url": "https://arxiv.org/abs/2307.15189"
+      },
+      "pdf": "",
+      "note": "基线",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P023",
+      "title": "PathVQA: 30000+ questions for medical visual question answering",
+      "title_zh": "PathVQA：面向医学视觉问答的三万余道问题",
+      "authors": "He",
+      "first_author": "He",
+      "year": 2020,
+      "venue": "arXiv",
+      "type": "数据集",
+      "tier": "T2",
+      "rc": [
+        "RC2"
+      ],
+      "caps": [
+        "数据集"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 3,
+      "one_liner": "病理图像大规模问答数据集。",
+      "borrowable": "开放/封闭问题类别。",
+      "gap": "合成交互不足。",
+      "keywords": [
+        "PathVQA",
+        "pathology"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2003.10286",
+        "url": "https://arxiv.org/abs/2003.10286"
+      },
+      "pdf": "",
+      "note": "基础数据集",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P024",
+      "title": "VQA-Med: Overview of the Medical Visual Question Answering Task at ImageCLEF 2019",
+      "title_zh": "VQA-Med：ImageCLEF 2019 医学视觉问答任务综述",
+      "authors": "Ben Abacha",
+      "first_author": "Ben Abacha",
+      "year": 2019,
+      "venue": "CLEF",
+      "type": "数据集",
+      "tier": "T2",
+      "rc": [
+        "背景"
+      ],
+      "caps": [
+        "数据集",
+        "基准"
+      ],
+      "depth": "题名",
+      "status": "待读",
+      "score": 3,
+      "one_liner": "ImageCLEF 医学 VQA 基准。",
+      "borrowable": "问题类别与竞赛协议。",
+      "gap": "无闭环决策。",
+      "keywords": [
+        "VQA-Med",
+        "benchmark"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "",
+        "url": "http://ceur-ws.org/Vol-2380/"
+      },
+      "pdf": "",
+      "note": "竞赛材料；题名已补全，链接改为 CEUR-WS Vol-2380 工作笔记卷",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P025",
+      "title": "Overview of the VQA-Med Task at ImageCLEF 2020: Visual Question Answering and Generation in the Medical Domain",
+      "title_zh": "ImageCLEF 2020 VQA-Med 任务综述：医学领域的视觉问答与生成",
+      "authors": "Ben Abacha",
+      "first_author": "Ben Abacha",
+      "year": 2020,
+      "venue": "CLEF",
+      "type": "数据集",
+      "tier": "T2",
+      "rc": [
+        "RC2"
+      ],
+      "caps": [
+        "数据集",
+        "基准"
+      ],
+      "depth": "题名",
+      "status": "待读",
+      "score": 3,
+      "one_liner": "医学异常问答与视觉问题生成。",
+      "borrowable": "VQG 任务设计。",
+      "gap": "未研究澄清质量。",
+      "keywords": [
+        "VQG",
+        "medical VQA"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "",
+        "url": "http://ceur-ws.org/Vol-2696/"
+      },
+      "pdf": "",
+      "note": "竞赛材料；题名已补全（CEUR-WS Vol-2696）",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P026",
+      "title": "Overview of the VQA-Med Task at ImageCLEF 2021: Visual Question Answering and Generation in the Medical Domain",
+      "title_zh": "ImageCLEF 2021 VQA-Med 任务综述：医学领域的视觉问答与生成",
+      "authors": "Ben Abacha",
+      "first_author": "Ben Abacha",
+      "year": 2021,
+      "venue": "CLEF",
+      "type": "数据集",
+      "tier": "T2",
+      "rc": [
+        "背景"
+      ],
+      "caps": [
+        "数据集",
+        "基准"
+      ],
+      "depth": "题名",
+      "status": "待读",
+      "score": 3,
+      "one_liner": "医学 VQA 竞赛延续基准。",
+      "borrowable": "专家复核测试集。",
+      "gap": "无风险控制。",
+      "keywords": [
+        "VQA-Med",
+        "benchmark"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "",
+        "url": "http://ceur-ws.org/Vol-2936/"
+      },
+      "pdf": "",
+      "note": "竞赛材料；题名已补全（CEUR-WS Vol-2936）",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P027",
+      "title": "Rad-ReStruct: A Novel VQA Benchmark and Method for Structured Radiology Reporting",
+      "title_zh": "Rad-ReStruct：面向结构化放射报告的新型视觉问答基准与方法",
+      "authors": "Pellegrini",
+      "first_author": "Pellegrini",
+      "year": 2023,
+      "venue": "MICCAI",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC2",
+        "RC3"
+      ],
+      "caps": [
+        "基准"
+      ],
+      "depth": "题名",
+      "status": "待读",
+      "score": 4,
+      "one_liner": "按放射报告结构组织层级问题。",
+      "borrowable": "上下文依赖与层级问答。",
+      "gap": "固定层级不能替代动态证据归因。",
+      "keywords": [
+        "hierarchical VQA",
+        "Radiology"
+      ],
+      "links": {
+        "doi": "10.1007/978-3-031-43904-9_40",
+        "arxiv": "",
+        "url": "https://doi.org/10.1007/978-3-031-43904-9_40"
+      },
+      "pdf": "",
+      "note": "原表缺会议与链接，已补（MICCAI 2023，Pellegrini et al.）",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P028",
+      "title": "MMQL: Multi-question learning for medical visual question answering",
+      "title_zh": "MMQL：面向医学视觉问答的多问题学习",
+      "authors": "Chen",
+      "first_author": "Chen",
+      "year": 2024,
+      "venue": "MICCAI",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC3"
+      ],
+      "caps": [
+        "融合"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 3,
+      "one_liner": "联合回答同一图像的多个相关问题。",
+      "borrowable": "熵剪枝与问题顺序增强。",
+      "gap": "非用户反馈驱动的追问。",
+      "keywords": [
+        "multi-question learning",
+        "consistency"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "",
+        "url": ""
+      },
+      "pdf": "",
+      "note": "来自综述B参考文献",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P029",
+      "title": "MedKLIP: Medical Knowledge Enhanced Language-Image Pre-Training for X-ray Diagnosis",
+      "title_zh": "MedKLIP：面向 X 射线诊断的医学知识增强语言—图像预训练",
+      "authors": "Wu",
+      "first_author": "Wu",
+      "year": 2023,
+      "venue": "ICCV",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC2"
+      ],
+      "caps": [
+        "知识"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 3,
+      "one_liner": "用关系抽取和医学知识增强预训练。",
+      "borrowable": "医学知识三元组。",
+      "gap": "缺失证据归因和澄清缺失。",
+      "keywords": [
+        "knowledge graph",
+        "pretraining"
+      ],
+      "links": {
+        "doi": "10.1109/iccv51070.2023.01954",
+        "arxiv": "",
+        "url": "https://doi.org/10.1109/iccv51070.2023.01954"
+      },
+      "pdf": "",
+      "note": "原表记 Chen 2022 MICCAI 有误：实为 Wu et al., ICCV 2023；若原意是 Align/Reason/Learn（Chen 2022 ACM MM）需另立条目",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P030",
+      "title": "Q2ATransformer: Improving medical VQA via an answer querying decoder",
+      "title_zh": "Q2ATransformer：以答案查询解码器改进医学视觉问答",
+      "authors": "Liu",
+      "first_author": "Liu",
+      "year": 2023,
+      "venue": "IPMI",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC2"
+      ],
+      "caps": [
+        "归因"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 3,
+      "one_liner": "用答案查询解码器增强医学 VQA。",
+      "borrowable": "问题到答案的查询解码。",
+      "gap": "未建模拒答/风险。",
+      "keywords": [
+        "medical VQA",
+        "transformer"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "",
+        "url": ""
+      },
+      "pdf": "",
+      "note": "来自综述B参考文献",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P031",
+      "title": "RAMM: Retrieval-augmented Biomedical Visual Question Answering with Multi-modal Pre-training",
+      "title_zh": "RAMM：多模态预训练与检索增强的生物医学视觉问答",
+      "authors": "Yuan",
+      "first_author": "Yuan",
+      "year": 2023,
+      "venue": "ACM MM",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC2",
+        "RC3"
+      ],
+      "caps": [
+        "知识"
+      ],
+      "depth": "题名",
+      "status": "待读",
+      "score": 4,
+      "one_liner": "用检索增强生物医学视觉问答。",
+      "borrowable": "多模态检索与证据注入。",
+      "gap": "检索证据冲突时无稳定更新策略。",
+      "keywords": [
+        "RAG",
+        "biomedical VQA"
+      ],
+      "links": {
+        "doi": "10.1145/3581783.3611830",
+        "arxiv": "",
+        "url": "https://doi.org/10.1145/3581783.3611830"
+      },
+      "pdf": "",
+      "note": "题名补全副标题（ACM MM 2023）",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P032",
+      "title": "Debiasing medical visual question answering via counterfactual training",
+      "title_zh": "以反事实训练缓解医学视觉问答中的偏差",
+      "authors": "Zhan",
+      "first_author": "Zhan",
+      "year": 2023,
+      "venue": "MICCAI",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC1"
+      ],
+      "caps": [
+        "拒答"
+      ],
+      "depth": "题名",
+      "status": "待读",
+      "score": 3,
+      "one_liner": "用反事实训练缓解医学 VQA 语言偏置。",
+      "borrowable": "改变答案先验的训练。",
+      "gap": "偏置降低不等于风险校准。",
+      "keywords": [
+        "counterfactual",
+        "bias"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "",
+        "url": ""
+      },
+      "pdf": "",
+      "note": "来自综述B参考文献",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P033",
+      "title": "PMC-VQA: Visual instruction tuning for medical visual question answering",
+      "title_zh": "PMC-VQA：面向医学视觉问答的视觉指令微调",
+      "authors": "Zhang",
+      "first_author": "Zhang",
+      "year": 2023,
+      "venue": "arXiv",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC1",
+        "RC2"
+      ],
+      "caps": [
+        "拒答"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 4,
+      "one_liner": "医学视觉问答视觉指令微调。",
+      "borrowable": "医学 instruction tuning。",
+      "gap": "未覆盖多轮安全动作。",
+      "keywords": [
+        "instruction tuning",
+        "medical VQA"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2305.10415",
+        "url": "https://arxiv.org/abs/2305.10415"
+      },
+      "pdf": "",
+      "note": "基线",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P034",
+      "title": "Mimic-CXR-VQA: A medical visual question answering dataset constructed with LLaMA-based annotations",
+      "title_zh": "MIMIC-CXR-VQA：基于 LLaMA 标注构建的医学视觉问答数据集",
+      "authors": "Aas-Alas",
+      "first_author": "Aas-Alas",
+      "year": 2025,
+      "venue": "MIDL",
+      "type": "数据集",
+      "tier": "T2",
+      "rc": [
+        "RC2",
+        "RC3"
+      ],
+      "caps": [
+        "数据集"
+      ],
+      "depth": "题名",
+      "status": "待读",
+      "score": 4,
+      "one_liner": "用 LLaMA 标注构建胸片问答。",
+      "borrowable": "大规模胸片问题来源。",
+      "gap": "自动标注可靠性和反馈缺失。",
+      "keywords": [
+        "MIMIC-CXR",
+        "VQA"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "",
+        "url": ""
+      },
+      "pdf": "",
+      "note": "需核验链接；据综述 B 参考文献确认为 MIDL 2025，未独立核到页码",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P035",
+      "title": "DermaVQA: A multilingual visual question answering dataset for dermatology",
+      "title_zh": "DermaVQA：面向皮肤科的多语言视觉问答数据集",
+      "authors": "Yim",
+      "first_author": "Yim",
+      "year": 2024,
+      "venue": "MICCAI",
+      "type": "数据集",
+      "tier": "T2",
+      "rc": [
+        "RC2"
+      ],
+      "caps": [
+        "数据集"
+      ],
+      "depth": "题名",
+      "status": "待读",
+      "score": 3,
+      "one_liner": "皮肤科多语言视觉问答数据集。",
+      "borrowable": "跨语言和专科问题。",
+      "gap": "未处理拒答和证据缺失。",
+      "keywords": [
+        "dermatology",
+        "multilingual"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "",
+        "url": ""
+      },
+      "pdf": "",
+      "note": "来自综述B参考文献",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P036",
+      "title": "A multimodal biomedical foundation model trained from fifteen million image-text pairs",
+      "title_zh": "以一千五百万图文对训练的多模态生物医学基础模型",
+      "authors": "Zhang",
+      "first_author": "Zhang",
+      "year": 2025,
+      "venue": "NEJM AI",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC1",
+        "RC2"
+      ],
+      "caps": [
+        "拒答"
+      ],
+      "depth": "题名",
+      "status": "待读",
+      "score": 4,
+      "one_liner": "大规模生物医学图文预训练基础模型。",
+      "borrowable": "跨模态预训练资源。",
+      "gap": "基础模型仍需校准与行动策略。",
+      "keywords": [
+        "biomedical foundation model"
+      ],
+      "links": {
+        "doi": "10.1056/AIoa2400640",
+        "arxiv": "",
+        "url": "https://doi.org/10.1056/AIoa2400640"
+      },
+      "pdf": "",
+      "note": "模型基线；年份原记 2024，实际 NEJM AI 2025 发表",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P037",
+      "title": "A generalist vision-language foundation model for diverse biomedical tasks",
+      "title_zh": "面向多种生物医学任务的通用视觉语言基础模型",
+      "authors": "Zhang",
+      "first_author": "Zhang",
+      "year": 2024,
+      "venue": "Nature Medicine",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC1"
+      ],
+      "caps": [
+        "拒答"
+      ],
+      "depth": "题名",
+      "status": "待读",
+      "score": 3,
+      "one_liner": "面向多种生物医学任务的通用视觉语言模型。",
+      "borrowable": "跨任务迁移基线。",
+      "gap": "泛化不等于可答性和拒答。",
+      "keywords": [
+        "generalist VLM",
+        "biomedical"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "",
+        "url": ""
+      },
+      "pdf": "",
+      "note": "来自综述B参考文献",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P038",
+      "title": "Exploring response uncertainty in MLLMs: An empirical evaluation under misleading scenarios",
+      "title_zh": "多模态大语言模型回答不确定性的探索：误导情境下的实证评估",
+      "authors": "Dang",
+      "first_author": "Dang",
+      "year": 2025,
+      "venue": "EMNLP",
+      "type": "方法",
+      "tier": "T3",
+      "rc": [
+        "RC1"
+      ],
+      "caps": [
+        "校准",
+        "基准"
+      ],
+      "depth": "题名",
+      "status": "待读",
+      "score": 2,
+      "one_liner": "在误导场景评估 MLLM 响应不确定性。",
+      "borrowable": "误导输入压力测试。",
+      "gap": "非医学交互。",
+      "keywords": [
+        "response uncertainty",
+        "misleading"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2411.02708",
+        "url": "https://aclanthology.org/2025.emnlp-main.916/"
+      },
+      "pdf": "",
+      "note": "背景",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P039",
+      "title": "Calibrating uncertainty quantification of multi-modal LLMs using grounding",
+      "title_zh": "以视觉定位校准多模态大语言模型的不确定性量化",
+      "authors": "Padhi",
+      "first_author": "Padhi",
+      "year": 2025,
+      "venue": "arXiv",
+      "type": "方法",
+      "tier": "T3",
+      "rc": [
+        "RC1",
+        "RC2"
+      ],
+      "caps": [
+        "校准",
+        "归因"
+      ],
+      "depth": "题名",
+      "status": "待读",
+      "score": 2,
+      "one_liner": "用 grounding 校准多模态不确定性。",
+      "borrowable": "把视觉支持纳入置信估计。",
+      "gap": "未做医学多轮闭环。",
+      "keywords": [
+        "grounding",
+        "calibration"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2505.03788",
+        "url": "https://arxiv.org/abs/2505.03788"
+      },
+      "pdf": "",
+      "note": "背景",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P040",
+      "title": "Right this way: Can VLMs guide us to see more to answer questions?",
+      "title_zh": "这边请：视觉语言模型能否引导我们看得更多以回答问题？",
+      "authors": "Liu",
+      "first_author": "Liu",
+      "year": 2024,
+      "venue": "NeurIPS",
+      "type": "方法",
+      "tier": "T3",
+      "rc": [
+        "RC2"
+      ],
+      "caps": [
+        "归因"
+      ],
+      "depth": "题名",
+      "status": "待读",
+      "score": 2,
+      "one_liner": "研究 VLM 是否能通过指导观察获得更多证据。",
+      "borrowable": "主动获取视觉证据。",
+      "gap": "未面向医学风险和用户澄清。",
+      "keywords": [
+        "active perception",
+        "VLM"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "",
+        "url": "https://papers.nips.cc/paper_files/paper/2024/hash/efe4e50d492fedc0dfd2959f3320a974-Abstract-Conference.html"
+      },
+      "pdf": "",
+      "note": "背景",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P041",
+      "title": "Hearsay: Vision-Language Medical Diagnoses Without an Image",
+      "title_zh": "Hearsay：无影像条件下的视觉语言医学诊断",
+      "authors": "Vohra",
+      "first_author": "Vohra",
+      "year": 2026,
+      "venue": "arXiv",
+      "type": "方法",
+      "tier": "T1",
+      "rc": [
+        "RC1",
+        "背景"
+      ],
+      "caps": [
+        "幻觉"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 4,
+      "one_liner": "不附图也照编诊断：必答范式在医学 VLM 上的直接证据。",
+      "borrowable": "“无图像仍强行诊断”的实验设计与错误率证据。",
+      "gap": "只暴露现象，未给出可答性量化与澄清机制。",
+      "keywords": [
+        "hallucination",
+        "image-absent",
+        "medical VLM"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2607.26886",
+        "url": "https://arxiv.org/abs/2607.26886"
+      },
+      "pdf": "",
+      "note": "新增；指南★★★；arXiv 元数据已核（2026-07-29）",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P042",
+      "title": "KnowGuard: Knowledge-Driven Abstention for Multi-Round Clinical Reasoning",
+      "title_zh": "KnowGuard：知识驱动的多轮临床推理弃答",
+      "authors": "Dang",
+      "first_author": "Dang",
+      "year": 2025,
+      "venue": "arXiv",
+      "type": "方法",
+      "tier": "T1",
+      "rc": [
+        "RC1",
+        "RC2"
+      ],
+      "caps": [
+        "拒答",
+        "多轮追问",
+        "知识"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 5,
+      "one_liner": "用知识图谱证据池驱动“先调查再拒答”的多轮临床推理。",
+      "borrowable": "证据池检索 + 拒答触发条件的多轮组织方式。",
+      "gap": "证据池为预置知识，未建模证据获取代价与最小澄清。",
+      "keywords": [
+        "abstention",
+        "knowledge graph",
+        "multi-round",
+        "clinical"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2509.24816",
+        "url": "https://arxiv.org/abs/2509.24816"
+      },
+      "pdf": "",
+      "note": "新增；指南★★★；arXiv 元数据已核（2025-09-29）",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P043",
+      "title": "Robots That Ask For Help: Uncertainty Alignment for Large Language Model Planners",
+      "title_zh": "会求助的机器人：大语言模型规划器的不确定性对齐",
+      "authors": "Ren",
+      "first_author": "Ren",
+      "year": 2023,
+      "venue": "CoRL",
+      "type": "方法",
+      "tier": "T1",
+      "rc": [
+        "RC1"
+      ],
+      "caps": [
+        "拒答",
+        "校准"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 4,
+      "one_liner": "用共形预测把不确定性对齐成“何时向人求助”的统计保证。",
+      "borrowable": "KnowNo 共形预测 + 阈值校准 → 求助/拒答决策。",
+      "gap": "面向机器人规划，非医学影像；不涉及证据缺口归因。",
+      "keywords": [
+        "conformal prediction",
+        "know-no",
+        "help-seeking",
+        "uncertainty alignment"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2307.01928",
+        "url": "https://arxiv.org/abs/2307.01928"
+      },
+      "pdf": "",
+      "note": "新增；指南★★★；arXiv 元数据已核（2023-07-04，正文载 CoRL 2023）",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P044",
+      "title": "Reliable Visual Question Answering: Abstain Rather Than Answer Incorrectly",
+      "title_zh": "可靠视觉问答：宁可弃答，不可答错",
+      "authors": "Whitehead",
+      "first_author": "Whitehead",
+      "year": 2022,
+      "venue": "ECCV",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC1"
+      ],
+      "caps": [
+        "拒答"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 3,
+      "one_liner": "提出风险–覆盖率曲线与 Effective Reliability 指标的选择性 VQA。",
+      "borrowable": "风险-覆盖评测协议、Effective Reliability 指标定义。",
+      "gap": "通用视觉问答，无医学证据语境与多轮澄清。",
+      "keywords": [
+        "selective prediction",
+        "abstention",
+        "risk-coverage"
+      ],
+      "links": {
+        "doi": "10.1007/978-3-031-20059-5_9",
+        "arxiv": "",
+        "url": "https://doi.org/10.1007/978-3-031-20059-5_9"
+      },
+      "pdf": "",
+      "note": "新增；指南★★；Crossref 元数据已核（LNCS / ECCV 2022）",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P045",
+      "title": "Deep Multimodal Learning with Missing Modality: A Survey",
+      "title_zh": "缺失模态下的深度多模态学习：综述",
+      "authors": "Wu",
+      "first_author": "Wu",
+      "year": 2024,
+      "venue": "arXiv",
+      "type": "综述",
+      "tier": "T2",
+      "rc": [
+        "RC1"
+      ],
+      "caps": [
+        "拒答"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 3,
+      "one_liner": "系统梳理缺失模态学习的问题设定、方法与评测。",
+      "borrowable": "缺失模态分类法、补齐与鲁棒训练策略。",
+      "gap": "关注模态缺失本身，不涉及“证据缺失如何转成提问”。",
+      "keywords": [
+        "missing modality",
+        "multimodal learning",
+        "survey"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2409.07825",
+        "url": "https://arxiv.org/abs/2409.07825"
+      },
+      "pdf": "",
+      "note": "新增；指南★★；arXiv 元数据已核（2024-09-12）",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P046",
+      "title": "ProMRVL-CAD: Proactive Dialogue System with Multi-Round Vision-Language Interactions for Computer-Aided Diagnosis",
+      "title_zh": "ProMRVL-CAD：面向计算机辅助诊断的多轮视觉语言主动对话系统",
+      "authors": "Li",
+      "first_author": "Li",
+      "year": 2025,
+      "venue": "arXiv",
+      "type": "方法",
+      "tier": "T2",
+      "rc": [
+        "RC2"
+      ],
+      "caps": [
+        "多轮追问"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 3,
+      "one_liner": "面向影像辅助诊断的主动多轮问诊系统设计。",
+      "borrowable": "多轮影像-文本交互流程与主动追问策略。",
+      "gap": "未做证据缺口归因，未量化提问的信息增益与代价。",
+      "keywords": [
+        "proactive dialogue",
+        "CAD",
+        "multi-round",
+        "medical VLM"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2502.10620",
+        "url": "https://arxiv.org/abs/2502.10620"
+      },
+      "pdf": "",
+      "note": "新增；指南★★；arXiv 元数据已核（2025-02-15）",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P047",
+      "title": "ALFA: Aligning LLMs to Ask Good Questions: A Case Study in Clinical Reasoning",
+      "title_zh": "ALFA：让大语言模型学会提出好问题——临床推理案例研究",
+      "authors": "Li",
+      "first_author": "Li",
+      "year": 2025,
+      "venue": "arXiv",
+      "type": "方法",
+      "tier": "T3",
+      "rc": [
+        "RC2"
+      ],
+      "caps": [
+        "多轮追问"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 2,
+      "one_liner": "用对齐训练让模型问出高质量澄清问题（以临床推理为例）。",
+      "borrowable": "问题质量的对齐目标与训练路线。",
+      "gap": "关注问题质量，未建模最小提问数与停止条件。",
+      "keywords": [
+        "question asking",
+        "alignment",
+        "clinical reasoning"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2502.14860",
+        "url": "https://arxiv.org/abs/2502.14860"
+      },
+      "pdf": "",
+      "note": "新增；指南★；arXiv 元数据已核（2025-02-20）",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P048",
+      "title": "Knowledge Conflicts for LLMs: A Survey",
+      "title_zh": "大语言模型的知识冲突：综述",
+      "authors": "Xu",
+      "first_author": "Xu",
+      "year": 2024,
+      "venue": "EMNLP",
+      "type": "综述",
+      "tier": "T3",
+      "rc": [
+        "RC3"
+      ],
+      "caps": [
+        "融合",
+        "知识"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 2,
+      "one_liner": "梳理上下文证据与参数记忆之间的知识冲突类型与消解。",
+      "borrowable": "冲突分类、冲突检测与消解策略。",
+      "gap": "面向文本 LLM，未涉及多轮证据链状态更新。",
+      "keywords": [
+        "knowledge conflict",
+        "RAG",
+        "survey"
+      ],
+      "links": {
+        "doi": "10.18653/v1/2024.emnlp-main.486",
+        "arxiv": "",
+        "url": "https://doi.org/10.18653/v1/2024.emnlp-main.486"
+      },
+      "pdf": "",
+      "note": "新增；指南★；Crossref 元数据已核（EMNLP 2024）",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P049",
+      "title": "Trusted Multi-View Classification",
+      "title_zh": "可信多视图分类",
+      "authors": "Han",
+      "first_author": "Han",
+      "year": 2021,
+      "venue": "ICLR",
+      "type": "方法",
+      "tier": "T3",
+      "rc": [
+        "RC3"
+      ],
+      "caps": [
+        "校准",
+        "归因",
+        "融合"
+      ],
+      "depth": "略读",
+      "status": "已读",
+      "score": 2,
+      "one_liner": "用 Dempster–Shafer 证据理论融合多源视图并输出可信度。",
+      "borrowable": "证据理论融合、冲突度量与不确定性量化。",
+      "gap": "静态单轮融合，无用户反馈与跨轮状态。",
+      "keywords": [
+        "dempster-shafer",
+        "multi-view",
+        "evidence fusion",
+        "uncertainty"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2102.02051",
+        "url": "https://arxiv.org/abs/2102.02051"
+      },
+      "pdf": "",
+      "note": "新增；指南★；arXiv 元数据已核（2021-02-03，正文载 ICLR 2021）",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P050",
+      "title": "GMAI-MMBench: A Comprehensive Multimodal Evaluation Benchmark Towards General Medical AI",
+      "title_zh": "GMAI-MMBench：面向通用医学人工智能的综合多模态评测基准",
+      "authors": "Chen",
+      "first_author": "Chen",
+      "year": 2024,
+      "venue": "NeurIPS",
+      "type": "基准",
+      "tier": "T2",
+      "rc": [
+        "RC2",
+        "RC3"
+      ],
+      "caps": [
+        "数据集",
+        "基准"
+      ],
+      "depth": "摘要",
+      "status": "在读",
+      "score": 4,
+      "one_liner": "面向通用医学 AI 的综合多模态评测基准，覆盖多层级临床任务与多种影像模态。",
+      "borrowable": "多层级临床任务分类与大规模多模态评测集的组织方式。",
+      "gap": "以评测为主，未解决可答性判断、证据归因与多轮澄清机制。",
+      "keywords": [
+        "medical benchmark",
+        "multimodal evaluation",
+        "general medical AI",
+        "dataset"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2408.03361",
+        "url": "https://arxiv.org/abs/2408.03361"
+      },
+      "pdf": "",
+      "note": "示例补充：用于覆盖 type=基准/立场",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P051",
+      "title": "OmniMedVQA: A New Large-Scale Comprehensive Evaluation Benchmark for Medical LVLM",
+      "title_zh": "OmniMedVQA：面向医学大型视觉语言模型的大规模综合评测基准",
+      "authors": "Hu",
+      "first_author": "Hu",
+      "year": 2024,
+      "venue": "CVPR",
+      "type": "基准",
+      "tier": "T2",
+      "rc": [
+        "RC2"
+      ],
+      "caps": [
+        "数据集",
+        "基准"
+      ],
+      "depth": "摘要",
+      "status": "在读",
+      "score": 3,
+      "one_liner": "汇集多个医学专科与多种影像模态的大规模医学 LVLM 综合评测基准。",
+      "borrowable": "跨专科、跨模态的评测集组织与问题类型覆盖。",
+      "gap": "评测为主，未提供拒答、证据归因或澄清交互机制。",
+      "keywords": [
+        "medical LVLM",
+        "benchmark",
+        "dataset",
+        "evaluation"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2402.09181",
+        "url": "https://arxiv.org/abs/2402.09181"
+      },
+      "pdf": "",
+      "note": "示例补充：用于覆盖 type=基准/立场",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    },
+    {
+      "id": "P052",
+      "title": "Foundation models for generalist medical artificial intelligence",
+      "title_zh": "通用医学人工智能的基础模型",
+      "authors": "Moor",
+      "first_author": "Moor",
+      "year": 2023,
+      "venue": "Nature",
+      "type": "立场",
+      "tier": "T3",
+      "rc": [
+        "背景"
+      ],
+      "caps": [
+        "知识"
+      ],
+      "depth": "摘要",
+      "status": "在读",
+      "score": 2,
+      "one_liner": "提出面向通用医学人工智能的基础模型范式，强调多模态预训练与知识整合。",
+      "borrowable": "基础模型能力边界与通用性的讨论框架。",
+      "gap": "立场文章，未给出可答性量化、证据归因与多轮决策机制。",
+      "keywords": [
+        "foundation model",
+        "generalist medical AI",
+        "knowledge",
+        "perspective"
+      ],
+      "links": {
+        "doi": "10.1038/s41586-023-05881-4",
+        "arxiv": "",
+        "url": "https://doi.org/10.1038/s41586-023-05881-4"
+      },
+      "pdf": "",
+      "note": "示例补充：用于覆盖 type=基准/立场",
+      "added_at": "2026-10-21",
+      "updated_at": "2026-10-21"
+    }
+  ]
+}

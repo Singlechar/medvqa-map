@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>研究文献映射库 · MedVQA</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="appbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true">M</span>
+    <span class="brand-text">研究文献映射库<small>MedVQA · RC1 / RC2 / RC3</small></span>
+  </div>
+
+  <div class="search">
+    <input id="search-input" type="search" placeholder="搜索标题 / 作者 / 一句话 / 笔记…（按 / 聚焦）" autocomplete="off" spellcheck="false" aria-label="全局搜索">
+    <button id="search-clear" class="search-clear" type="button" title="清空搜索" hidden>×</button>
+  </div>
+
+  <nav class="viewtabs" id="viewtabs" role="tablist" aria-label="视图切换">
+    <button type="button" class="viewtab is-on" data-view="list" role="tab">列表</button>
+    <button type="button" class="viewtab" data-view="board" role="tab">看板</button>
+    <button type="button" class="viewtab" data-view="matrix" role="tab">矩阵</button>
+    <button type="button" class="viewtab" data-view="timeline" role="tab">时间线</button>
+  </nav>
+
+  <span class="appbar-spacer"></span>
+
+  <button id="add-paper-btn" type="button" class="btn" title="添加文献（快捷键 n）">＋ 添加</button>
+  <span id="dirty-badge" class="dirty-badge" hidden></span>
+  <button id="copy-link" type="button" class="btn" title="复制当前筛选与视图的链接">复制链接</button>
+
+  <div class="menu-wrap">
+    <button id="export-btn" type="button" class="btn btn-strong" aria-haspopup="true" aria-expanded="false">导出 <span class="caret" aria-hidden="true">▾</span></button>
+    <div id="export-menu" class="menu" hidden role="menu">
+      <div class="menu-head">导出 / 存档</div>
+      <button type="button" class="menu-item" data-act="json" role="menuitem"><b>导出 papers.json</b><small>完整数据，可直接覆盖原文件</small></button>
+      <button type="button" class="menu-item" data-act="csv" role="menuitem"><b>导出 papers.csv</b><small>UTF-8 BOM，Excel 双击打开不乱码</small></button>
+      <button type="button" class="menu-item" data-act="md" role="menuitem"><b>导出按 RC 分组的 Markdown</b><small>可直接粘进汇报材料</small></button>
+      <div class="menu-sep"></div>
+      <button type="button" class="menu-item" data-act="offline" role="menuitem"><b>导出离线副本 papers.offline.js</b><small>双击 index.html 时读取的数据</small></button>
+      <button type="button" class="menu-item" data-act="print" role="menuitem"><b>打印当前视图</b><small>矩阵视图已针对 A4 横版优化</small></button>
+      <div class="menu-sep"></div>
+      <button type="button" class="menu-item menu-danger" data-act="reload" role="menuitem"><b>放弃本地修改，重新加载</b><small>清空 localStorage 草稿并从 papers.json 重读</small></button>
+    </div>
+  </div>
+
+  <button id="theme-btn" type="button" class="btn btn-icon" title="切换主题：跟随系统 / 浅色 / 深色">◐</button>
+</header>
+
+<div class="workspace">
+
+  <aside class="filters" id="filters" aria-label="筛选面板">
+    <div class="filters-head">
+      <div class="hitcount">命中 <strong id="hit-n">0</strong> <span class="slash">/</span> 共 <span id="total-n">0</span> 篇</div>
+      <button id="clear-filters" type="button" class="linkbtn">清空筛选</button>
+    </div>
+
+    <div class="filter-block">
+      <div class="filter-title">Tier <span class="filter-note">必读 / 相关 / 背景</span></div>
+      <div class="chip-row" data-filter="tier">
+        <button type="button" class="chip" data-value="T1" title="T1 必读">T1</button>
+        <button type="button" class="chip" data-value="T2" title="T2 相关">T2</button>
+        <button type="button" class="chip" data-value="T3" title="T3 背景">T3</button>
+      </div>
+    </div>
+
+    <div class="filter-block">
+      <div class="filter-title">研究内容 RC <span class="filter-note">可多选</span></div>
+      <div class="chip-row" data-filter="rc">
+        <button type="button" class="chip chip-rc1" data-value="RC1" title="RC1 可答性判断与风险标尺">RC1</button>
+        <button type="button" class="chip chip-rc2" data-value="RC2" title="RC2 关键缺失证据归因与最小澄清">RC2</button>
+        <button type="button" class="chip chip-rc3" data-value="RC3" title="RC3 证据链增量融合与风险稳定更新">RC3</button>
+        <button type="button" class="chip chip-bg" data-value="背景" title="背景 / 领域全景">背景</button>
+      </div>
+    </div>
+
+    <div class="filter-block">
+      <div class="filter-title">阅读深度</div>
+      <div class="chip-row" data-filter="depth">
+        <button type="button" class="chip" data-value="题名">题名</button>
+        <button type="button" class="chip" data-value="摘要">摘要</button>
+        <button type="button" class="chip" data-value="略读">略读</button>
+        <button type="button" class="chip" data-value="精读">精读</button>
+      </div>
+    </div>
+
+    <div class="filter-block">
+      <div class="filter-title">状态</div>
+      <div class="chip-row" data-filter="status">
+        <button type="button" class="chip" data-value="待读">待读</button>
+        <button type="button" class="chip" data-value="在读">在读</button>
+        <button type="button" class="chip" data-value="已读">已读</button>
+      </div>
+    </div>
+
+    <div class="filter-block">
+      <div class="filter-title">阅读状态 <span class="filter-note">由 depth + status 推导</span></div>
+      <div class="chip-row" data-filter="read">
+        <button type="button" class="chip chip-read" data-value="未读" title="未读：depth=题名/摘要 且 status≠在读"><i class="read-dot read-unread" aria-hidden="true"></i>未读</button>
+        <button type="button" class="chip chip-read" data-value="在读" title="在读：status=在读，且 depth 不是略读/精读"><i class="read-dot read-reading" aria-hidden="true"></i>在读</button>
+        <button type="button" class="chip chip-read" data-value="略读" title="略读：depth=略读（优先于 status）"><i class="read-dot read-skim" aria-hidden="true"></i>略读</button>
+        <button type="button" class="chip chip-read" data-value="精读" title="精读：depth=精读（优先于 status，即使 status 未改）"><i class="read-dot read-deep" aria-hidden="true"></i>精读</button>
+      </div>
+    </div>
+
+    <div class="filter-block">
+      <div class="filter-title">年份区间</div>
+      <div class="year-range">
+        <input id="year-from" class="input input-sm" type="number" inputmode="numeric" placeholder="最早" aria-label="起始年份">
+        <span class="dash">–</span>
+        <input id="year-to" class="input input-sm" type="number" inputmode="numeric" placeholder="最新" aria-label="截止年份">
+      </div>
+    </div>
+
+    <div class="filter-block">
+      <div class="filter-title">Venue</div>
+      <select id="venue-select" class="select">
+        <option value="">全部 venue</option>
+      </select>
+    </div>
+
+    <div class="filters-foot">
+      <div id="source-note" class="source-note"></div>
+      <div class="shortcut-note">Esc 关闭抽屉 · <kbd>/</kbd> 搜索 · <kbd>n</kbd> 添加 · <kbd>Delete</kbd> 删除选中行 · <kbd>1</kbd>–<kbd>4</kbd> 切视图</div>
+    </div>
+  </aside>
+
+  <main class="main" id="main">
+
+    <section id="view-list" class="view" data-view="list">
+      <div class="toolbar">
+        <button id="list-add-btn" type="button" class="btn btn-strong" title="添加文献（快捷键 n）">＋ 添加文献</button>
+        <label class="switch"><input id="group-toggle" type="checkbox" checked> 按 tier 分组</label>
+        <label class="switch" title="在圆点右侧显示阅读状态文字（打印时强制显示）"><input id="read-label-toggle" type="checkbox"> 显示状态文字</label>
+        <span class="toolbar-note" id="list-note"></span>
+        <span class="toolbar-spacer"></span>
+        <span class="toolbar-note">点击表头排序 · 点击行打开详情 · 行尾 × 删除</span>
+      </div>
+      <div id="list-host" class="list-host"></div>
+    </section>
+
+    <section id="view-board" class="view" data-view="board" hidden>
+      <div class="toolbar">
+        <span class="toolbar-note">拖拽卡片可在 题名 / 摘要 / 略读 / 精读 之间移动；改动即时存本地</span>
+      </div>
+      <div id="board-host" class="board"></div>
+    </section>
+
+    <section id="view-matrix" class="view" data-view="matrix" hidden>
+      <div class="toolbar">
+        <div class="seg" id="matrix-dim" role="group" aria-label="矩阵列维度">
+          <button type="button" class="seg-btn is-on" data-dim="rc">按研究内容 RC</button>
+          <button type="button" class="seg-btn" data-dim="caps">按能力标签</button>
+          <button type="button" class="seg-btn" data-dim="venue">按 venue</button>
+        </div>
+        <label class="switch"><input id="matrix-t1" type="checkbox"> 只看 T1</label>
+        <span class="toolbar-spacer"></span>
+        <span class="legend">
+          <span class="legend-item"><i class="st-mark st-2">●</i>直接对应</span>
+          <span class="legend-item"><i class="st-mark st-1">◐</i>部分相关</span>
+          <span class="legend-item"><i class="st-mark st-0">○</i>不相关</span>
+        </span>
+      </div>
+      <div id="matrix-host" class="matrix-host"></div>
+    </section>
+
+    <section id="view-timeline" class="view" data-view="timeline" hidden>
+      <div class="toolbar">
+        <div class="seg" id="timeline-group" role="group" aria-label="时间线分组">
+          <button type="button" class="seg-btn is-on" data-group="rc">按研究内容分组</button>
+          <button type="button" class="seg-btn" data-group="tier">按 tier 分组</button>
+        </div>
+        <span class="toolbar-spacer"></span>
+        <span class="legend" id="timeline-legend"></span>
+      </div>
+      <div id="timeline-host" class="timeline-host"></div>
+    </section>
+
+  </main>
+</div>
+
+<aside id="drawer" class="drawer" aria-hidden="true" aria-label="文献详情">
+  <div class="drawer-head">
+    <div class="drawer-heading">
+      <span class="drawer-kicker" id="drawer-kicker"></span>
+      <div class="drawer-title-row"><span id="drawer-read-dot" class="read-dot" title=""></span><h2 class="drawer-title" id="drawer-title"></h2></div>
+      <div class="drawer-sub" id="drawer-sub"></div>
+    </div>
+    <button id="drawer-close" type="button" class="btn btn-icon" title="关闭（Esc）">×</button>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+</aside>
+<div id="backdrop" class="backdrop" hidden></div>
+
+<div id="modal" class="modal" hidden>
+  <div class="modal-card" id="modal-card" role="dialog" aria-modal="true"></div>
+</div>
+
+<div id="tooltip" class="tooltip" hidden></div>
+<div id="toast" class="toast" hidden></div>
+
+<noscript>
+  <p style="padding:16px;font:14px/1.6 system-ui">本页面需要启用 JavaScript 才能显示文献数据。</p>
+</noscript>
+
+<script src="data/papers.offline.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
