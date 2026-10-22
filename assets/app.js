@@ -1137,6 +1137,20 @@
     return v;
   }
 
+  /**
+   * 站内相对路径的线上解析：仓库根 = 站点根，所以线上（http/https）要把
+   * "../02_参考文献/xxx.pdf" 开头的 "../" 去掉；本机双击（file://）保持原样，
+   * 才能从 07_文献映射库/ 找到项目根目录的 02_参考文献/。
+   * 已有协议（http/https/data/file…）的绝对地址一律原样返回。
+   */
+  function webSafePath(v) {
+    var s = str(v);
+    if (!s || /^[a-z][a-z0-9+.-]*:/i.test(s)) return s;
+    if (location.protocol === 'file:') return s;
+    while (/^\.\.\//.test(s)) s = s.slice(3);
+    return s;
+  }
+
   /** 失焦清洗：去首尾空格、URL 补协议、DOI 剥 doi.org 前缀、arXiv 剥 abs/pdf 前缀。 */
   function cleanLinkInput(field, raw) {
     var v = str(raw);
@@ -1230,7 +1244,7 @@
     if (!v) { toast('尚未填写' + (LINK_LABEL[field] || field)); return; }
     var href = field === 'doi' ? 'https://doi.org/' + v
       : field === 'arxiv' ? 'https://arxiv.org/abs/' + v
-        : v;
+        : webSafePath(v);
     window.open(href, '_blank', 'noopener,noreferrer');
   }
 
