@@ -1,7 +1,8 @@
 window.__PAPERS_OFFLINE__ =
 {
   "version": 1,
-  "updated_at": "2026-10-21",
+  "updated_at": "2026-10-26",
+  "exported_at": "2026-10-26T00:00:00.000Z",
   "matrix_overrides": {},
   "papers": [
     {
@@ -41,7 +42,7 @@ window.__PAPERS_OFFLINE__ =
       "pdf": "../02_参考文献/综述A_MedVQA.pdf",
       "note": "综述A",
       "added_at": "2026-10-21",
-      "updated_at": "2026-10-21"
+      "updated_at": "2026-10-22"
     },
     {
       "id": "P002",
@@ -122,7 +123,7 @@ window.__PAPERS_OFFLINE__ =
       "pdf": "../02_参考文献/综述C_不确定性感知决策.pdf",
       "note": "综述C",
       "added_at": "2026-10-21",
-      "updated_at": "2026-10-21"
+      "updated_at": "2026-10-22"
     },
     {
       "id": "P004",
@@ -144,8 +145,8 @@ window.__PAPERS_OFFLINE__ =
         "多轮追问",
         "基准"
       ],
-      "depth": "精读",
-      "status": "已读",
+      "depth": "摘要",
+      "status": "在读",
       "score": 5,
       "one_liner": "交互式医学问答中的拒答、提问和病人反馈闭环。",
       "borrowable": "轨迹日志与多轮交互协议。",
@@ -163,7 +164,7 @@ window.__PAPERS_OFFLINE__ =
       "pdf": "../02_参考文献/MediQ.pdf",
       "note": "项目复现对象；元数据据本地 PDF 与 Crossref 核实（NeurIPS 2024，arXiv 2406.00922）",
       "added_at": "2026-10-21",
-      "updated_at": "2026-10-21"
+      "updated_at": "2026-10-22"
     },
     {
       "id": "P005",
@@ -1852,7 +1853,7 @@ window.__PAPERS_OFFLINE__ =
         "基准"
       ],
       "depth": "摘要",
-      "status": "在读",
+      "status": "待读",
       "score": 4,
       "one_liner": "面向通用医学 AI 的综合多模态评测基准，覆盖多层级临床任务与多种影像模态。",
       "borrowable": "多层级临床任务分类与大规模多模态评测集的组织方式。",
@@ -1871,7 +1872,7 @@ window.__PAPERS_OFFLINE__ =
       "pdf": "",
       "note": "示例补充：用于覆盖 type=基准/立场",
       "added_at": "2026-10-21",
-      "updated_at": "2026-10-21"
+      "updated_at": "2026-10-22"
     },
     {
       "id": "P051",
@@ -1891,7 +1892,7 @@ window.__PAPERS_OFFLINE__ =
         "基准"
       ],
       "depth": "摘要",
-      "status": "在读",
+      "status": "待读",
       "score": 3,
       "one_liner": "汇集多个医学专科与多种影像模态的大规模医学 LVLM 综合评测基准。",
       "borrowable": "跨专科、跨模态的评测集组织与问题类型覆盖。",
@@ -1910,7 +1911,7 @@ window.__PAPERS_OFFLINE__ =
       "pdf": "",
       "note": "示例补充：用于覆盖 type=基准/立场",
       "added_at": "2026-10-21",
-      "updated_at": "2026-10-21"
+      "updated_at": "2026-10-22"
     },
     {
       "id": "P052",
@@ -1929,7 +1930,7 @@ window.__PAPERS_OFFLINE__ =
         "知识"
       ],
       "depth": "摘要",
-      "status": "在读",
+      "status": "待读",
       "score": 2,
       "one_liner": "提出面向通用医学人工智能的基础模型范式，强调多模态预训练与知识整合。",
       "borrowable": "基础模型能力边界与通用性的讨论框架。",
@@ -1948,7 +1949,201 @@ window.__PAPERS_OFFLINE__ =
       "pdf": "",
       "note": "示例补充：用于覆盖 type=基准/立场",
       "added_at": "2026-10-21",
-      "updated_at": "2026-10-21"
+      "updated_at": "2026-10-22"
+    },
+    {
+      "id": "P053",
+      "title": "MedClarify: An information-seeking AI agent for medical diagnosis with case-specific follow-up questions",
+      "title_zh": "MedClarify：面向医学诊断、可生成病例特异追问的信息获取型 AI 智能体",
+      "authors": "Hui Min Wong, Philip Heesen, Pascal Janetzky, Martin Bendszus, Stefan Feuerriegel",
+      "first_author": "Wong",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "type": "方法",
+      "tier": "T1",
+      "rc": [
+        "RC2",
+        "RC3"
+      ],
+      "caps": [
+        "多轮追问",
+        "校准"
+      ],
+      "depth": "精读",
+      "status": "已读",
+      "score": 5,
+      "one_liner": "用 LLM 自报的 5 个候选诊断置信度算期望熵减（DEIG：熵减 + ICD-11 章节语义散度 + 基尼探索项），逐轮挑增益最大的追问并做贝叶斯 + 温度缩放更新；全特征遮蔽的 469 例文本病例上 top-1 相对单轮 LLM +26.9 p.p.、相对朴素多轮 +5.7 p.p.，平均 8.96 问/例，ECE 0.37→0.16。",
+      "borrowable": "① 熵减+语义散度+基尼集中度三项加权打分（α=0.5/β=0.35/γ=0.15），可改造成 RC1 的风险/可答性标尺；② ICD-11 章节相似度矩阵给同义亚型的伪不确定性折价（式 3 + 表 1）；③ 停止三条件（t=10、P_max>0.97、ΔP_max>0.85）配 T=1.1 温度缩放防尖峰；④ 新出现候选的先验取既有先验均值、不置零（证据链更新可直接照抄）；⑤ 六特征结构化病例 + 整类遮蔽矩阵，类别级掉点（实验室 −19.8 > 影像 −16.6 > 症状 −7.2 > 体格检查 −7.1 p.p.）可作缺失归因实验的先验与对照数字；⑥ Patient/Doctor/Update/Evaluator 四 agent 切分，Update agent 过滤非信息性回答的噪声控制。",
+      "gap": "信息增益的概率源是 LLM 自报置信度（作者明确只需有意义排序，再 T=1.1 压平），support/refute 两个后验也是同一 LLM 在假设患者答是/否后重新生成——属模型自估的期望熵减；全文没有证据级真值：病例只按六类特征整类遮蔽，无原子事实 add-one/LOO，既不能指出哪条缺失证据决定答案（K_sufficient/N），也给不出最少几问（M_m），只报平均 8.96 问与聚合增益；可答性混同于置信度阈值、无独立拒答机制；唯一真值是每例最终诊断标签且由 LLM 判官裁定；仅文本单模态，影像只作可遮蔽的一类特征。",
+      "keywords": [
+        "information-seeking agent",
+        "diagnostic expected information gain",
+        "DEIG",
+        "follow-up question generation",
+        "differential diagnosis",
+        "Bayesian belief updating",
+        "entropy",
+        "ICD-11 semantic similarity",
+        "temperature scaling",
+        "incomplete patient cases",
+        "feature masking",
+        "calibration"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2602.17308",
+        "url": "https://arxiv.org/abs/2602.17308"
+      },
+      "pdf": "../02_参考文献/MedClarify.pdf",
+      "note": "**四问｜信息增益从哪来、有没有真值？** 概率来自 LLM 自报的 k=5 候选诊断置信度 π（[S5-P07]/[S5-P08]，作者明言“只需有意义的排序、不必校准”），再做温度缩放 T=1.1（[S5-P31]）；support/refute 两个条件熵是让同一 LLM“假设患者答是/否”后重新生成鉴别诊断得到的（[S5-L02]、[S5-P17]）——即**模型自估的期望熵减**，不是显式似然 P(e|d)。患者回答来自 Patient 模拟器（喂完整病例、每题只透露一条、不报病名，[S5-P35]）。\n\n**真值**：只有病例级最终诊断标签，由 LLM Evaluator 比对预测病名与唯一诊断（[S5-P41]）；**没有证据级真值**——病例只按六类特征整类遮蔽（[S5-L04]），无原子事实 add-one/LOO，故给不出 K_sufficient/N(c)/M_m，只能报平均 8.96 问/例与聚合增益（NEJM 28.0→36.1、汇总 +5.7 p.p.、vs 单轮 +26.9 p.p.，[S3-P09]）。\n\n**与 RC2 差异**：问题级 vs 事实级；模型自估熵减 vs 反事实实测翻转；平均问数 vs 最小澄清集上界；LLM 判官 vs 非 LLM 可答性判官。\n\n**中英对照**：`03_notes/中英对照/MedClarify_中英对照.md`；详细问答：`_归档/2026-10-26_W1四篇文献/translate/MedClarify/answers.md`。",
+      "added_at": "2026-10-26",
+      "updated_at": "2026-10-26"
+    },
+    {
+      "id": "P054",
+      "title": "QuestBench: Can LLMs ask the right question to acquire information in reasoning tasks?",
+      "title_zh": "QuestBench：大语言模型能否在推理任务中提出正确的问题以获取信息？",
+      "authors": "Belinda Z. Li, Been Kim, Zi Wang",
+      "first_author": "Li",
+      "year": 2025,
+      "venue": "NeurIPS 2025 Datasets & Benchmarks",
+      "type": "基准",
+      "tier": "T1",
+      "rc": [
+        "RC2",
+        "RC1"
+      ],
+      "caps": [
+        "多轮追问",
+        "基准"
+      ],
+      "depth": "精读",
+      "status": "已读",
+      "score": 4,
+      "one_liner": "把“缺一条信息才能解”形式化为 1-sufficient CSP（最小充分集基数为 1 的欠指定约束满足问题），用多选题测 LLM 能否从候选变量中挑出唯一必要的一问；真值由反向搜索离线算出、与模型无关，只评选择不评答后正确性；最好模型 Logic-Q/Planning-Q 仅 49.91%/47.32%，BFS depth-10 可达 99.8%/93.9%。",
+      "borrowable": "① Known 谓词式过滤（候选必须“当前未知且不能由已有赋值/约束推出”）可搬成 RC2 的证据槽有效性过滤，给“过度追问”一个可判定下界；② BFS 上界（depth 3/5/10 = 39.0/80.6/99.8%）作“任务可解而模型不会”的对照，类比“符号/专家最小集 ≥ 贪心 |M_m|”三层对照；③ well-specified 对照实验（补回那一问再测，Logic-Q 完全不涨）＝ RC1 可答性 × RC2 归因的 2×2 交叉表，剔除“能力问题被误归因为证据缺失”；④ “No questions needed.” 选项 + not-sure 检测（F1 + 按真值比例随机基线）；⑤ 四个难度轴（|X|、|C|、搜索深度 d、暴力期望 E_BF）的相关分析，可改成“病史条数/影像区域数 vs 归因准确率”；⑥ 四域数据集构造配方（反向搜索求差一个赋值的配对、枚举同一最优规划的部分状态再删一原子、GSM-Plus 干扰项设定）。",
+      "gap": "单问 + 多选 + 符号真值三件套决定它测不到 RC2 核心：①“最小”是充分集最小基数（1-sufficient 下恒为 1），不是“最少几问”，无序列/顺序/信息增益递减，|M| 不在其框架内；②只评“是否选中充分变量”，不把答案喂回模型、不测“补上这条后答案是否变对”，故无 u(f|A) 反事实实测；③真值先于并独立于模型，无模型相对性，而 K_sufficient/N/M 全部索引于具体模型；④无医学、无病史、无多模态，题面封闭不需临床知识，影像轨无对应物；⑤多选会高估（作者自承），无提问成本/隐私/患者负担；⑥只做 1-sufficient，k-sufficient（多缺失、序贯/批量提问）被列为未来工作——正是 M 的位置。",
+      "keywords": [
+        "QuestBench",
+        "underspecified reasoning",
+        "1-sufficient CSP",
+        "constraint satisfaction problem",
+        "clarifying question",
+        "information acquisition",
+        "minimal necessary question",
+        "multiple-choice evaluation",
+        "PDDL planning",
+        "Blocks World",
+        "GSM-Plus",
+        "underspecification detection",
+        "benchmark"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2503.22674",
+        "url": "https://arxiv.org/abs/2503.22674"
+      },
+      "pdf": "../02_参考文献/QuestBench.pdf",
+      "note": "**四问｜它的“最小充分澄清”怎么定义？和我们的 M 差在哪？** 定义（三句话）：最小 = 充分集最小基数 X̂=argmin|X'|，在 1-sufficient 题里恒为 1；充分 = 符号可推演 Known(X')∧A∧C ⟹ Known(y)，由反向搜索预先算出、**与模型无关**；必要 = 该变量当前不 Known（未赋值且推不出）。因此它的“最小必要问题”是**一个变量**，评的是“有没有选中”，不是“问完有没有答对”。\n\n**与 M_m(c) 逐条差异**：单问 vs 多问序列；选项选择 vs 自由选证据；符号可推演真值 vs 反事实实测 u(f|A)；模型无关 vs 模型索引；无医学无病史 vs MediQ+病史+影像双轨；它不测“补上这条后是否答对”，而 u 的定义恰是答错→答对的翻转；评“问对变量”vs“问完答对 + |M|”。三者不可互译：它的 necessary 是语用义，我们的 N(c) 是反事实 LOO。\n\n**关键数字**：ZS 下 Logic-Q 最高 49.91%（o1-preview）、Planning-Q 最高 47.32%（Gemini 2.0 FTE），GSME-Q/GSM-Q 达 98.01%/91.32%；BFS depth-10 却达 99.8%/93.9%（题可解，差距在“不会问”）；完全指定版 Logic-Q 89.34% 却换不来提问增益；Planning-Q 真值 41.8% 该说 not sure，模型只说 1.4%/4.6%/0.7%。\n\n**中英对照**：`03_notes/中英对照/QuestBench_中英对照.md`（6 chunk / 235 单元，checker OK；含原文 Table 1/2/3 等 8 张表）；详细问答：`_归档/2026-10-26_W1四篇文献/translate/QuestBench/answers.md`。",
+      "added_at": "2026-10-26",
+      "updated_at": "2026-10-26"
+    },
+    {
+      "id": "P055",
+      "title": "Sufficient Context: A New Lens on Retrieval Augmented Generation Systems",
+      "title_zh": "充分上下文：审视检索增强生成系统的一个新视角",
+      "authors": "Hailey Joren, Jianyi Zhang, Chun-Sung Ferng, Da-Cheng Juan, Ankur Taly, Cyrus Rashtchian",
+      "first_author": "Joren",
+      "year": 2025,
+      "venue": "ICLR 2025",
+      "type": "方法",
+      "tier": "T1",
+      "rc": [
+        "RC1",
+        "RC2"
+      ],
+      "caps": [
+        "拒答",
+        "校准",
+        "幻觉"
+      ],
+      "depth": "精读",
+      "status": "已读",
+      "score": 5,
+      "one_liner": "提出只依赖 (问题, 上下文)、不需要标准答案的“充分上下文”二值属性，用 Gemini 1.5 Pro autorater 把 RAG 错误分层，证明“上下文够不够”不能替代“答得对不对”（不充分时 SOTA 仍 35–62% 答对、充分时仍有 14–16% 错），再用充分性 + 自评置信度做选择性生成。",
+      "borrowable": "① 充分性标签 + 自评置信度 → 逻辑回归 → 阈值调 risk–coverage 的可控弃答配方（Gemini/GPT/Gemma 通用，幻觉降 2–10%）；② 按证据充分性分层报指标的口径（先报数据里不充分比例，再谈模型表现）；③ “判可答性不需要 gold answer”的思路，可作我们非 LLM 可答性判官的外部效度核验（与 BM25 判官算 κ，不一致样本进人工复核池）；④ 附录 B.3 的“LLM 判 vs 字符串包含”双指标对照，提示我们的字面判官必须与人工核验集对照；⑤ 失败模式分类（优柔寡断/信息不全/难验证/矛盾）可直接借到 RC1 的风险标尺。",
+      "gap": "只输出实例级二值“够不够”，不指出缺哪条证据，无最小澄清集与多轮风险更新；autorater 仅在 115 条人工标注上验证，且无标注者一致性（IAA）、无提示词/采样消融、无对抗样本；未在医学术语密集、事实冗余、多选诊断场景验证；FLAMe 按 1600-token 切块 OR 聚合会系统性高估充分性；上下文含错误答案仍判“充分”（定义使然），与临床“证据必须正确”直觉相悖。",
+      "keywords": [
+        "sufficient context",
+        "context sufficiency",
+        "autorater",
+        "RAG",
+        "abstention",
+        "selective generation",
+        "hallucination",
+        "risk-coverage",
+        "answerability"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2411.06037",
+        "url": "https://arxiv.org/abs/2411.06037"
+      },
+      "pdf": "../02_参考文献/SufficientContext.pdf",
+      "note": "**四问｜autorater 怎么判“够不够”？能不能直接当我们的可答性判官？** 构造：Gemini 1.5 Pro 0-shot/1-shot（1-shot 最佳，F1 0.935/Acc 0.930），输入**只有 (Q,C)、不含 gold 也不含模型输出**，输出**二值**；廉价替代 FLAMe-RM-24B 按 1600-token 切块、任一块充分即整例充分（OR 聚合）；验证集仅 **115 条**人工标注（故意塞“高度相关但不足”的干扰），无 IAA、无消融。定义允许“上下文里有错误答案也算充分”——把可答性与答对彻底解耦。\n\n**能否直接用作可答性判官**：**不能当主口径**（不产出“缺哪条”、对 K_sufficient/M_m 无直接贡献；LLM 判官不可复现；add-one/LOO 成本上千倍；医学术语/长病例冗余/多选三重迁移风险），**可作为第二口径/外部效度核验**（其“不需要 gold”与我们非 LLM、证据侧判可答同构）——建议 BM25 主口径 + 该 LLM 判官在 50–100 条人工集上算 κ，不一致样本进人工复核池，论文作敏感性分析。\n\n**关键数字**：不充分时 SOTA 仍 35–62% 答对；充分时最好模型仍 14–16% 错；FreshQA 充分率 77.4%、Musique 不充分率 55.4%；加 RAG 反而降低弃答（Claude 84.1%→52%）。\n\n**中英对照**：`03_notes/中英对照/SufficientContext_中英对照.md`（5 chunk / 126 单元，checker OK；含 Table 1 autorater 对照表）；详细问答：`_归档/2026-10-26_W1四篇文献/translate/SufficientContext/answers.md`。",
+      "added_at": "2026-10-26",
+      "updated_at": "2026-10-26"
+    },
+    {
+      "id": "P056",
+      "title": "From Hindsight to Foresight: Dissecting Clinical Evidence Acquisition in Large Language Models",
+      "title_zh": "从后见之明到前瞻：剖析大语言模型中的临床证据获取",
+      "authors": "Ziyang Ling",
+      "first_author": "Ling",
+      "year": 2026,
+      "venue": "arXiv preprint",
+      "type": "方法",
+      "tier": "T1",
+      "rc": [
+        "RC2",
+        "RC3"
+      ],
+      "caps": [
+        "多轮追问",
+        "归因",
+        "校准"
+      ],
+      "depth": "精读",
+      "status": "已读",
+      "score": 4,
+      "one_liner": "用 Fullsight（一次给全）/ Foresight（≤6 轮前瞻获取）/ Hindsight（看完完整病例后让同一模型排 6 条最有用原子事实）三对照，在 181 例上把“前瞻证据获取失败”拆成证据到来之前/已获证据构成/证据到来之后三环：@3 准确率 33.1% vs 73.5%（差 40.3 p.p.，OR 15.60），数量匹配后仍差 29.8 p.p.，受控单事实救援 +11.4 p.p.。",
+      "borrowable": "① Fullsight/Foresight/Hindsight 三设置 + V 形曲线可作 RC2 的动机实验模板与引用（注意 Hindsight 只是“证据识别”的经验参照，不是可部署策略/可达上界）；② 数量匹配对照（把 Hindsight 截断到 Foresight 实测条数）可搬成“是 A₀ 条数不够还是缺的恰好是那几条”的消融；③ 集合/顺序四臂 FF/FR/HH/HR + 六前缀 AUSC，把“问什么”与“何时给”分离；④ JSD（幅度）对 Δp_ref（方向）双坐标，是证明“置信度升/熵降 ≠ 答对”的现成反例；⑤ Stable Sufficiency（每个前缀都对的稳定正确率）比最终准确率更适合评多轮澄清；⑥ WSP/停滞率/恢复率/ECNR 轨迹指标与“主张边界”写法（同证据负对照、重复读数可靠性、选择器扰动一致性、冻结协议 + 种子 + 校验和、人工审计并报双评不一致）。",
+      "gap": "没有逐条证据真值：无对 F(c) 全集的 add-one、无 LOO/遮挡（必要性方向完全没有）、无“自报关键 vs 实测关键”的混淆矩阵，因此给不出 K_sufficient 与 M_m；“关键证据”完全由模型在完整病例上的事后排序（Hindsight）反推，作者三处明说 CER“不是临床金标准集”、排序“不等同金标准”、选择器审计只是敏感性检验；受控插入只覆盖 Hindsight Top-1~3 且对照仅粗模态匹配（非信息等价）；纯文本事实、无影像轨；概率/熵线可靠性未过门槛（30 例桥接 Top-1 0.440、熵 Spearman 0.082），仅作敏感性分析；估计条件化于 Fullsight 正确（190/320），不是无条件临床准确率；证据获取真值是词法匹配器 m1_lexical_type_v1 的产物（会出现“要血常规返回血压”）；正文 4.1 与附录的 140 例续接数字自相矛盾（52.5% vs 47.9%）。",
+      "keywords": [
+        "clinical evidence acquisition",
+        "hindsight",
+        "foresight",
+        "fullsight",
+        "dynamic diagnosis",
+        "interactive diagnosis",
+        "information seeking",
+        "evidence coverage",
+        "critical evidence recall",
+        "stable sufficiency",
+        "trajectory dynamics",
+        "counterfactual evidence insertion",
+        "truth-directed gain",
+        "claim boundary"
+      ],
+      "links": {
+        "doi": "",
+        "arxiv": "2610.18605",
+        "url": "https://arxiv.org/abs/2610.18605"
+      },
+      "pdf": "../02_参考文献/FromHindsightToForesight.pdf",
+      "note": "**四问｜它有没有做“证据获取的真值”？** **部分做了，但不是 RC2 意义上的逐条证据真值。** 它有三层真值：①病例级诊断真值 y*（基准标签 + 盲评 GPT-5.5 语义等价 + 100 例人工审计）；②规则级“是否获取到”真值（确定性词法匹配器 m1_lexical_type_v1 判 new/dup/no-match）；③抽样级单事实“充分性”反事实（把缺失事实插进错误前缀立即重诊断：114 例 S1 16.7% vs 对照 5.3%，+11.4 p.p., p=0.0044；33 例 rank×depth 15 格）。\n\n**没有**：逐条证据关键性标注（“关键证据”完全由模型事后排序反推，是伪参照）、逐条 add-one 全集、**LOO/遮挡必要性**、自报关键 vs 实测关键的混淆矩阵。逐实验：A 无 / B 部分（只有获取真值）/ C 部分 / D 部分（充分性最接近“有”、必要性无、覆盖只 Top-1~3）/ E 无。→ **对 RC2 不构成真值撞车**。\n\n**写作避雷**：别写“首次测量缺失关键证据的因果影响”“补上关键证据可使答案变对”“区分了证据识别与获取”——都是它的。我们的新意：以 A₀ 为共同锚点的逐条反事实（add-one 充分性 + LOO 必要性 + 影像遮挡/仅留）、M_m 最小澄清集、自报 vs 实测核账（差异句见 answers §6.3）。\n\n**中英对照**：`03_notes/中英对照/FromHindsightToForesight_中英对照.md`（8 chunk / 273 单元，checker OK；含 18 张可文表格，附录 T7/T17–T28 原为图片）；详细问答：`_归档/2026-10-26_W1四篇文献/translate/FromHindsightToForesight/answers.md`。",
+      "added_at": "2026-10-26",
+      "updated_at": "2026-10-26"
     }
   ]
 };
